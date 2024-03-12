@@ -64,4 +64,10 @@ alter table train add constraint chk check(train_no>10001 and train_no<99999);
 
 alter table train add constraint trn_unq1 unique(source);alter table train add constraint trn_unq2 unique(destination);
 
+alter table train modify start_time date;
+alter table train modify reach time date;
+alter table train modify strat_time timestamop(0);
+alter table train
+
+
 
