@@ -69,6 +69,8 @@ alter table train modify reach time date;
 alter table train modify strat_time timestamop(0);
 alter table train
 
+alter table ticket add constraint tkt_chk1 check c class in ('1A','2A',3A,S2,C));
+
 alter table train_route modify distance constraintb trn_rt_route not null;
 
 
