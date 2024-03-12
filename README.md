@@ -23,3 +23,23 @@ key(train_no) references train(train_no), class varchar(10), base_fare integer(3
 reservation_charge integer(3), superfast_charge integer(3), other_charge integer(3),
 tatkal_charge integer(3), service_tax integer(3), constraint tf_pk primary
 key(train_no, class));
+
+
+
+2> 
+delete from passenger;
+rename table passenger to passengerdetails;
+select * from tables;
+
+select * from train orderby train_no asc;
+select * from passenger where age>60;
+
+SELECT source
+FROM train
+WHERE source LIKE m% union SELECT destination
+FROM train
+WHERE destination LIKE m% ;
+
+select * from train where train_number between 1200 and 1400
+update train_tkt_fare set superfast_charge=0 where superfastcharge is NULL;
+select * from passenger where reservation status!='sucessful';
