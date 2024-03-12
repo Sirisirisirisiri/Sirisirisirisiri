@@ -32,6 +32,7 @@ rename table passenger to passengerdetails;
 select * from tables;
 
 select * from train orderby train_no asc;
+
 select * from passenger where age>60;
 
 SELECT source
@@ -41,5 +42,7 @@ FROM train
 WHERE destination LIKE m% ;
 
 select * from train where train_number between 1200 and 1400
+
 update train_tkt_fare set superfast_charge=0 where superfastcharge is NULL;
+
 select * from passenger where reservation status!='sucessful';
