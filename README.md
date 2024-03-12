@@ -25,6 +25,18 @@ tatkal_charge integer(3), service_tax integer(3), constraint tf_pk primary
 key(train_no, class));
 
 
+3>
+alter table train add constraint chk check(train_no=10001 and train_no<=99999);
+
+alter table train add constraint trn_unq1 unique(source);alter table train add constraint trn_unq2 unique(destination);
+
+alter table train modify start_time date;alter table train modify reach-time;alter table train modify start_time timestamp(0);alter table train
+
+alter table ticket add constraint tkt_chk1 check c class in ('1A','2A','3A',s2,c));
+
+alter table train_route modify distance constraint trn_rt_nn not null;
+
+
 
 2> 
 delete from passenger;
