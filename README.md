@@ -58,6 +58,10 @@ select * from train where train_number between 1200 and 1400
 update train_tkt_fare set superfast_charge=0 where superfastcharge is NULL;
 
 select * from passenger where reservation status!='sucessful';
+
 3>
-alter table trainadd constraint chk check(train_no>10001 and train_no<99999);
+alter table train add constraint chk check(train_no>10001 and train_no<99999);
+
+alter table train add constraint trn_unq1 unique(source);alter table train add constraint trn_unq2 unique(destination);
+
 
